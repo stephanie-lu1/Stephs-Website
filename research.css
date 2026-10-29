@@ -1,0 +1,165 @@
+/* RESEARCH PAGE */
+
+.research-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 40px;
+    align-items: stretch;
+    padding: 20px 40px;
+}
+
+.research-text {
+    font-size: 20px;
+    font-weight: 50;
+    margin-bottom: 20px;
+    text-align: center;
+    align-self: start;
+}
+
+.research-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+
+/* Fall 2025 */
+
+.junior-section {
+    display: grid;
+    gap: 40px;
+    padding: 10px 40px;
+}
+
+.fall-junior {
+    font-size: 20px;
+    font-weight: 50;
+    margin-left: 0px;
+}
+
+.introducing {
+    font-size: clamp(14px, 1.8vw, 20px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;   /* Two equal columns */
+    grid-template-rows: auto auto;
+    grid-template-areas: "imageA textA" "imageB textA" "imageC textA";
+    gap: 40px 60px;                    
+    padding: 40px 60px;
+    text-align: justify;
+    align-items: center;
+    
+}
+
+.image-a { grid-area: imageA; }
+.text-a  { grid-area: textA; }
+.image-b { grid-area: imageB; }
+.image-c { grid-area: imageC; }
+
+/* Ensure images scale nicely */
+.introducing img {
+    width: 80%;
+    height: auto;
+    max-width: auto;
+    display: block;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+/* MY WORK */
+
+.mywork-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-areas:
+        "mytextA myimage1"
+        "mytextB myimage2"
+        "mytextC myimage3";
+    gap: 70px;
+    padding: 40px 60px;
+}
+
+/* Assign areas */
+.mytext-a  { grid-area: mytextA; }
+.mytext-b  { grid-area: mytextB; }
+.mytext-c  { grid-area: mytextC; }
+.myimage-1 { grid-area: myimage1; }
+.myimage-2 { grid-area: myimage2; }
+.myimage-3 { grid-area: myimage3; }
+
+.mytext-a,
+.mytext-b,
+.mytext-c
+ {
+    font-size: 20px;
+    text-align: justify;
+    align-self: auto;
+}
+
+/* Image styling */
+.myimage-1 img
+{
+    margin-top: 90px;
+    width: 100%;
+    height: auto;
+    max-width: auto;
+    display: block;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.myimage-2 img {
+    margin-top: -40px;
+    width: 100%;
+    height: auto;
+    max-width: auto;
+    display: block;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.myimage-3 img {
+    margin-top: 10px;
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: stretch;
+    border-radius: 10px;
+}
+
+/* Spring 2026 */
+
+.vggface2-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-areas:
+        "firstText vggFaceImg1"
+        "secondText vggFaceImg2";
+    gap: 70px;
+    padding: 40px 60px;
+}
+
+/* Assign areas */
+.first-text  { grid-area: firstText; }
+.second-text  { grid-area: secondText; }
+.faceImg-1  { grid-area: vggFaceImg1; }
+.faceImg-2 { grid-area: vggFaceImg2; }
+
+
+.first-text,
+.second-text
+{
+    font-size: 20px;
+    text-align: justify;
+    align-self: auto;
+}
+
+.faceImg-1 img
+{
+    width: 100%;
+    height: auto;
+    max-width: auto;
+    display: block;
+    object-fit: contain;
+    border-radius: 10px;
+}

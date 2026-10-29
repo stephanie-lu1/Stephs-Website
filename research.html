@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+
+<body style="background-color: #ffffff;"></body>
+
+  <nav class="navbar" aria-label="Main navigation">
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="aboutme.html">About Me</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a class="resume-btn" href="resume.html">Resume</a></li>
+    </ul>
+  </nav>
+
+<head>
+    <title>Research</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stephanie Lu</title>
+    <link rel="stylesheet" href="style.css?v=20261029-nav2" />
+    <link rel="stylesheet" href="research.css" />
+</head>
+
+<!-- ####################################### -->
+
+<section class="research-section">
+    <div class = "research-text">
+        <h1><u>Current Research</u></h1>
+        <a href="https://www.hendersonneurolab.com/about/" target="_blank">
+            <h2>Henderson Lab</h2>
+        </a>  
+        <p>
+            <i>May 2025 - Present<br><br>
+               Note: This is the first page I started making when I first started
+               this website. It was when I was teaching myself HTML/CSS, so I fully coded this 
+               without AI :P 
+            </i>
+            
+        
+        </p>
+
+        <br><br>
+
+        <p> My research interests are on the intersection of
+            human social cognition and artifical intelligence. 
+            Specifically, I am fascinated by how neural networks
+            are able to learn complex tasks, such as facial recognition.
+
+            <br><br>
+
+            Read about what I did this fall below!
+        </p>
+    </div>
+
+
+    <div class = "research-image">
+        <img src="maggie lab.jpg" alt="Research photo">
+    </div>
+</section>
+
+<!-- ####################################### -->
+
+<!-- Separation of Intro and Work-->
+<div class = "horizontal-line"></div>
+
+<!-- ####################################### -->
+
+<!-- Fall 2025 Work -->
+
+ <section class="junior-section">
+    <div class="fall-junior">
+        <h2> Fall 2025 - Investigating Model Performance across Categories </h2>
+        <p> Motivation:
+            "Early experience with low-pass filtered images facilitates visual category learning in a neural network model"
+            (Jinsi et al 2023). <br>
+        </p>
+    </div>
+
+ </section>
+
+ <!-- Fall 2025 - Introducing Jinsi et al -->
+
+ <section class="introducing">
+
+    <!-- Row 1 -->
+    <div class="item image-a">
+        <img src="jinsietal.PNG" alt="Image A">
+        <p> 
+            <i>
+            (A): Global shape exemplars <br>
+            (B): Blur 
+            manipulation across training <br>
+            (C): Blurring across grayscale condition <br>
+            (D): Blurring across color condition
+            </i>
+        </p>
+    </div>
+
+
+    <!-- Row 2 -->
+
+    <div class="text-a">
+        
+            When humans are born, we have poor spatial acuity, color, and contrast sensitivity.
+            As we develop, these visual traits improve.
+            To account for this in model training, a blurring and grayscale condition were 
+            implemented onto images in the Ecoset dataset. Example images from the basic level categories 
+            “dog”, “fish”, “car”, “truck”, blurred at three example values for sigma. Note that larger sigma
+            values give rise to blurrier images, while σ = 0 results in an intact, non-blurred image. 
+            Examples of the same images are shown for the (C) grayscale and (D) color conditions (Jinsi et al 2023)
+
+            <br><br>
+
+            The results from training show that for the grayscale images, there is a benefit to
+            having blurred images compared to the non-blurred. However, for the color images, all
+            models converge to the same level of performance, regardless of blur.
+
+            <br><br>
+
+            Clearly, we see that the effect of blur is dependent on color as well as other model
+            training parameters. When color is present, learning may be based on that feature, instead
+            of considering shape and texture. In past literature, it was found that CNNs are biased 
+            towards texture and less about shape, but humans have shown the converse (Gierhos et al 2023).
+            When it is in grayscale condition, texture and shape are considered more. 
+
+            <br><br>
+
+            We should also consider some limitations for comparing human vision to neural network simulations.
+            When the CNN was trained, there are labels that provide supervision in training; it learns the 
+            ground truth during training. However, it was found in Elimas & Quinn (1994) that infants can distinguish
+            between visually-similar categories. Addtionally, in the dataset, there is only a limited number of
+            viewing conditions that are presented even in the 5.5+ million images. Arguably, humans have had much
+            much more training data across their life, so there is a lack of generalization able to made. All 
+            this is to say that we cannot perfectly compare humans and CNNs.
+    </div>
+
+
+     <div class="text-b image-b">
+        <img src="paperresults.png" alt="Image B">
+        <p> 
+            <i>
+            (A): Model accuracy across grayscale colors <br>
+            (B): Model accuracy across color images
+            </i>
+        </p>
+    </div>
+
+
+</section>
+
+<!-- Fall 2025 My Work -->
+
+
+
+<section class="mywork-grid">
+
+    <div class="mytext-a">
+        <h2>My Work:</h2>
+        <br><br><br><br>
+        <p>
+
+            There are six models from Jinsi et al. (2023): three trained on grayscale images 
+            (without blur, with linear blur, and with nonlinear blur) and three trained on color 
+            images (without blur, with linear blur, and with nonlinear blur). I did not re-train 
+            them, I only took the pre-trained models and evaluated their performance over ten
+            trials each. It is important to note that I also only took the maximum performance
+            at a given time from each one of these trials from the validation training set. 
+            That set me up to get one value per basic-level category for each model condition. 
+            From there, I computed the mean accuracy from each model condition for each category. The
+            models trained on the color conditions did perform the best, like the paper.
+
+
+            
+
+        </p>
+    </div>
+
+    
+
+    <div class="mytext-b">
+        <p>
+            Additionally, note that there is a discrepancy between the paper and my results. This 
+            is where the limitation of using the maximum performance time point comes in. I only 
+            got one value where we can see in the paper, the accuracy is measured across all time 
+            points per epoch (thus getting a curve). It is not a surprise that my accuracy values were 
+            higher. 
+        </p>
+    </div>
+
+
+
+    <div class="mytext-c">
+        <p>
+            From there, I separated the 565 basic-level categories into
+            14 superordinate categories but then modified it to 15. (Figure A shows the initial 
+            14 catgories, but I added on another one when performing t-statistic calculation later).
+            Some superordinate categories had more labels than others due to the nature of the dataset.
+            I computed the same average accuracy across these categories to get the general idea on which
+            categories the models were doing the best on. 
+
+            <br><br>
+
+            I was then curious about the effects between the blurred condition vs. the colored condition;
+            that is, is there any interaction between the conditions? So, I computed the t-statistics for 
+            each superordinate category. There is a significant t-statistic for the majority of the categories
+            in the colored condition, but only when there was a blur applied; this aligned with the paper as
+            expected. 
+
+            <br><br>
+
+            A few things to note include that my organization of superordinate categories was completely 
+            subjective. One category I was having issues with was the plants/foods categories - some plants
+            can be classified as food, so which category would I put that in? I ended up breaking it down even 
+            further and adding a "plants as foods" category, which were the plants that could act as food items as well.
+             I am currently in the process of continuing to break 
+            down the superordinate categories even more - some things I have done are breaking "objects" (miscalleanous) 
+            into natural and artifical objects, dividing animals and tools by size, and sorting tools/utilities by 
+            complexity. Future work can continue this breakdown,
+            as well as having a second coder of the labels into categories.
+
+
+        </p>
+    </div>
+
+
+
+
+    <div class="myimage-1">
+        <img src="rawdata.png" alt="Image 1">
+        <p align="center"> 
+            <i>
+            For each condition, noted the model trial's performance for a basic-level category. 
+            Image includes man, house, car, woman categories. Non-linear blur model was excluded.
+            </i>
+        </p>
+    </div>
+
+    <div class="myimage-2">
+        <img src="discrepancy.png" alt="Image 2">
+         <p align="center"> 
+            <i>
+            Taking maximum performance time point (left), compared to measuring
+            across all epochs (right).
+            </i>
+        </p>
+    </div>
+
+    <div class="myimage-3">
+        <img src="mywork2.png" alt="Image 3">
+         <p align="center"> 
+            <i>
+            (A): Average accuracy by condition and superordinate category. 
+            A darker color towards red indicates worse
+            performance and a brighter green indicates better performance.
+            (B): T-statistic comparison for effect of blur (top) and effect of color
+            (bottom). All p-values were less than 0.05 for the COLOR condition. 
+            </i>
+        </p>
+    </div>
+
+</section>
+
+<!-- Separation of Fall 2025 and Spring 2026-->
+ 
+<div class = "horizontal-line"></div>
+
+<!-- Title, Motivation -->
+<section class="junior-section">
+    <div class="fall-junior">
+        <h2> Spring 2026 - Coming soon! </h2>
+        <p> 
+            Motivation: "VGGFace2: A dataset for recognising faces across pose and age" (Cao et al 2018) <br>
+        </p>
+
+        <p align="center">
+            <i>One aspect of my interest of human social cognition + AI includes 
+            the question of <u> how well do models perform at the task of face
+            recognition? </u> To answer this question, I will be fine-tuning the 
+            previous ResNet-50 model trained on the Ecoset dataset onto the VGGface2 
+            dataset. </i>
+            <br><br><br>
+        </p>
+    </div>
+ </section>
+
+ <!-- Introducing VGGFace2 Dataset-->
+
+<section class="vggface2-grid">
+
+    <div class="first-text">
+        <p>
+            The VGGface2 dataset consists of over 3 million images among over 9 thousand
+            participants. Each partipant has anywhere from 80 - 843 images, accounting for
+            variation in pose, age, illumination, and ethnicity. It is worth mentioning
+            that the subjects in the dataset were only the ones who had a sufficient number
+            of imaegs of them available on Google Image Search; that is to say many of them
+            are celebrities/well known public figures.
+
+            <br><br>
+
+            In the paper, several ResNet-50 models trained on previous face datasets (
+            examples include but are not limited to VGGFace and MS-Celeb-1M) were trained
+            to provide a similarity score across a feature template of subjects varying in
+            pose and age. It was found that the model trained on the VGGFace2 dataset provided
+            the best result with the highest similarity score.
+
+        </p>
+    </div>
+
+    <div class="faceImg-1">
+        <img src="vggface2-example.png" alt="Image 1">
+        <p align="center">
+            <i>Examples of subjects in dataset, displaying variation in pose (left)
+            and age (right)</i>
+        </p>
+
+    </div>
+
+    
+
+ </section>
+
+
+
+
+
+
+
+
+
+
+
+  
+</html>

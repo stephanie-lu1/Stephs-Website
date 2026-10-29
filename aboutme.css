@@ -1,0 +1,382 @@
+/* Shared typography and spacing for the About Me and Resume pages. */
+body {
+  margin: 0;
+  background: #fafaf8;
+  color: #30332f;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:focus-visible {
+  outline: 2px solid #506550;
+  outline-offset: 5px;
+}
+
+.about-page {
+  width: calc(100% - 144px);
+  margin: 48px auto 96px;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+h1,
+h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+h1 {
+  margin-bottom: 28px;
+  font-size: clamp(36px, 5vw, 52px);
+  letter-spacing: -1px;
+}
+
+h2 {
+  margin-bottom: 28px;
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+h4 {
+  margin-top: 24px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+p + p {
+  margin-top: 18px;
+}
+
+.about-text {
+  width: 100%;
+}
+
+.intro {
+  font-size: 21px;
+  line-height: 1.6;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: center;
+  gap: 24px;
+  margin-top: 36px;
+}
+
+.about-photo {
+  display: block;
+  width: 90%;
+  height: auto;
+  margin-inline: auto;
+}
+
+.section-divider {
+  width: 100%;
+  height: 0;
+  margin: 72px 0;
+  border: 0;
+  border-top: 1px solid #c9ccc5;
+}
+
+.skills-courses-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 56px;
+  row-gap: 44px;
+  position: relative;
+  margin-inline: -16px;
+  text-align: left;
+}
+
+.skills-courses-grid::before {
+  content: "";
+  position: absolute;
+  inset-block: 0;
+  left: calc(50% - 0.5px);
+  width: 1px;
+  background: #d6d6d6;
+}
+
+.skills-courses-grid > section {
+  min-width: 0;
+  display: grid;
+  grid-row: span 4;
+  grid-template-rows: subgrid;
+  align-items: start;
+}
+
+.academic-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.academic-header h2 {
+  margin: 0;
+}
+
+.skills-courses-grid .section-note {
+  margin: 0;
+  color: #777;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.skills-courses-grid .category-heading {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.category-heading span {
+  white-space: nowrap;
+}
+
+.category-heading::after {
+  content: "";
+  flex: 1;
+  min-width: 16px;
+  height: 1px;
+  background: #bdbdbd;
+}
+
+.skills-courses-grid .detail-group ul {
+  margin: 18px 0 0;
+  padding: 0 0 0 24px;
+  list-style: none;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.75;
+  color: inherit;
+}
+
+.skills-courses-grid .coursework-column ul {
+  padding-left: 34px;
+}
+
+.coursework-column li {
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1fr);
+  line-height: 1.65;
+}
+
+.coursework-column li + li {
+  margin-top: 4px;
+}
+
+.course-code {
+  white-space: nowrap;
+}
+
+.course-title {
+  overflow-wrap: break-word;
+}
+
+.skills-courses-grid .course-role {
+  font-family: inherit;
+  font-size: 12px;
+  color: #777;
+}
+
+.events-list {
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.events-list li + li {
+  margin-top: 6px;
+}
+
+.leadership > h2 {
+  text-align: center;
+}
+
+.clubs-grid {
+  display: grid;
+  gap: 48px;
+}
+
+.club-side {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  align-items: center;
+  gap: 40px;
+}
+
+.club-side img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 701px) {
+  .club-side-reversed {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    grid-template-areas: "text image";
+  }
+
+  .club-side-reversed > img {
+    grid-area: image;
+  }
+
+  .club-side-reversed > .club-text {
+    grid-area: text;
+  }
+}
+
+.club-text h3 {
+  font-size: 21px;
+}
+
+.club-side-reversed .club-text {
+  text-align: right;
+}
+
+.club-tedx .club-text > p:not(.club-role) {
+  text-align: justify;
+}
+
+.club-role {
+  margin-top: 4px;
+  margin-bottom: 20px;
+  color: #60645e;
+  font-size: 14px;
+}
+
+.club-role + p {
+  margin-top: 0;
+}
+
+.advisory-note {
+  max-width: 740px;
+  margin: 48px auto 0;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .about-page {
+    width: calc(100% - 64px);
+    margin-top: 32px;
+    margin-bottom: 64px;
+  }
+
+  .about-grid {
+    gap: 12px;
+  }
+
+  .club-side {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 40px;
+  }
+
+  .section-divider {
+    margin: 48px 0;
+  }
+
+  .club-side {
+    gap: 24px;
+  }
+
+  .club-side img {
+    max-width: 400px;
+    margin-inline: auto;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+  .skills-courses-grid {
+    margin-inline: -40px;
+    column-gap: 40px;
+  }
+
+  .coursework-column li {
+    grid-template-columns: 100px minmax(0, 1fr);
+  }
+
+  .skills-courses-grid .coursework-column ul {
+    padding-left: 24px;
+  }
+}
+
+@media (max-width: 999px) {
+  .skills-courses-grid {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 64px;
+    margin-inline: 0;
+  }
+
+  .skills-courses-grid::before {
+    display: none;
+  }
+
+  .skills-courses-grid > section {
+    display: block;
+    grid-row: auto;
+  }
+
+  .academic-header {
+    margin-bottom: 32px;
+  }
+
+  .detail-group + .detail-group {
+    margin-top: 44px;
+  }
+
+}
+
+@media (max-width: 767px) {
+  .skills-courses-grid .category-heading {
+    gap: 18px;
+  }
+
+  /* Let long labels wrap while keeping their rule visible on narrow phones. */
+  .skills-courses-grid .category-heading span {
+    white-space: normal;
+    max-width: calc(100% - 34px);
+  }
+
+  .skills-courses-grid .detail-group ul {
+    font-size: 16px;
+    padding-left: 20px;
+  }
+
+  .coursework-column li {
+    grid-template-columns: 72px minmax(0, 1fr);
+  }
+}

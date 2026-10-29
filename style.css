@@ -1,0 +1,269 @@
+/* Body Stuff */
+body {
+    font-family: "Georgia", serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation */
+
+.nav-line {
+    width: 100%;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: rgba(240, 243, 248, 0.926);         /* bar background */
+    border-bottom: 2px solid black;   /* underline bar */
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 68px;
+    height: 68px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 14px;
+    line-height: 1.75;
+    color: #30332f;
+}
+
+.navbar .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 40px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    line-height: 24px;
+}
+
+.navbar .nav-links li {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+.navbar *,
+.navbar *::before,
+.navbar *::after {
+    box-sizing: border-box;
+}
+
+.navbar a {
+    display: block;
+    font: inherit;
+    color: inherit;
+    text-decoration: none;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+}
+
+.navbar a:hover,
+.navbar a[aria-current="page"] {
+    text-decoration: underline;
+}
+
+.navbar a:focus-visible {
+    outline: 2px solid #506550;
+    outline-offset: 5px;
+}
+
+@media (max-width: 700px) {
+    .navbar {
+        padding: 20px 24px;
+        height: auto;
+    }
+
+    .navbar .nav-links {
+        gap: 12px 24px;
+    }
+}
+
+
+/* Horizontal Line between Navigation + Hero */
+.horizontal-line {
+    width: 100%;
+    height: 2px;
+    margin:20px 0;
+    background-color: black;
+    justify-self: center;
+}
+
+/* ----- HEADER SECTION ----- */
+.header {
+    position: relative;                /* Needed for vertical line */
+    display: grid;
+    grid-template-columns: 1fr 2px 1fr;
+    padding: 20px;
+    align-items: center;
+}
+
+/* Vertical Line in Hero */
+.vertical-line {
+    width: 2px;
+    height: 100%;
+    background-color: black;
+    justify-self :center;
+    grid-column: 2;
+}
+
+/* Hero Page */
+
+.landing {
+  height: 80vh;
+  width: 100%;
+
+  background-image: url("bgLanding.jpg"); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  margin-bottom: 20px;
+}
+
+/* Optional overlay for readability */
+.landing-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* ===== Box Around Content ===== */
+.hero-box {
+  position: relative;
+  z-index: 2;
+
+  padding: 40px 60px;
+  text-align: center;
+
+  border: 1.5px solid black;
+  background: rgba(240, 243, 248, 0.926);
+
+  max-width: 85%;
+}
+
+/* ===== Name ===== */
+.hero-box h1 {
+  font-size: clamp(36px, 6vw, 64px);
+  letter-spacing: 3px;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+/* ===== Subtitle ===== */
+.subtitle {
+  font-size: clamp(16px, 2vw, 20px);
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+/* ===== Learn More ===== */
+.hero-scroll {
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.hero-scroll span {
+  display: block;
+  margin-top: 6px;
+  font-size: 18px;
+}
+
+
+
+
+
+/* About Area */
+
+.box-left {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    grid-column: 1;
+    font-size: 20px;
+    margin: 20px;
+}
+.box-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 3;
+}
+
+.profile-pic {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.button-learn-more {
+    display: inline-block;
+    padding: 30px 40px;
+    border-radius: 40px;     /* makes the oval shape */
+    background-color: #eee;
+    color: black;
+    font-size: 18px;
+    text-decoration: none;
+    border: 2px solid black;
+    transition: all 0.2s ease;
+    margin-top: 30px;
+}
+
+.button-learn-more:hover {
+    background-color: rgb(219, 248, 221);
+    color: black;
+    transform: translateY(-3px);
+}
+
+/* BUTTONS THAT GO TO OTHER STUFF */
+
+.button-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    gap: 55px;
+} 
+
+.buttons-text {
+    align-items: center;
+    text-align: center;
+    font-size: 40px;
+}
+
+.oval-btn {
+    display: inline-block;
+    padding: 30px 40px;
+    border-radius: 40px;     /* makes the oval shape */
+    background-color: #eee;
+    color: black;
+    font-size: 18px;
+    text-decoration: none;
+    border: 2px solid black;
+    transition: all 0.2s ease;
+}
+
+.oval-btn:hover {
+    background-color: rgb(168, 226, 241);
+    color: black;
+    transform: translateY(-3px);
+
+
+
+}
+
+
+
+
+
+

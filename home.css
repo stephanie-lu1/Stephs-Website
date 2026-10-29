@@ -1,0 +1,63 @@
+/* Home page colors and fonts; existing layouts stay in style.css. */
+.home-page {
+  background: #fafaf8;
+  color: #30332f;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.home-page h1,
+.home-page h2 {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.home-page .hero-box {
+  background: #fafaf8;
+}
+
+.home-page .horizontal-line {
+  height: 1px;
+  background: #bdbdbd;
+}
+
+.home-page .vertical-line {
+  width: 1px;
+  background: #d6d6d6;
+}
+
+.home-topics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+  margin: 56px 40px;
+}
+
+.home-topics > section {
+  min-width: 0;
+  padding: 32px;
+  border: 1px solid #bdbdbd;
+}
+
+.home-topics h3 {
+  margin: 0 0 24px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.home-topics p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+@media (max-width: 700px) {
+  .home-topics {
+    grid-template-columns: minmax(0, 1fr);
+    margin: 40px 24px;
+  }
+
+  .home-topics > section {
+    padding: 24px;
+  }
+}
