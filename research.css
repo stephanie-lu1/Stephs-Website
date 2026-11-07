@@ -1,5 +1,40 @@
 /* RESEARCH PAGE */
 
+.research-page {
+    background: #fafaf8;
+    color: #30332f;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.research-page h1,
+.research-page h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 400;
+}
+
+.research-page a {
+    color: inherit;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+}
+
+.research-page a:focus-visible {
+    outline: 2px solid #506550;
+    outline-offset: 5px;
+}
+
+.research-page .horizontal-line {
+    height: 1px;
+    background: #bdbdbd;
+}
+
+/* Blend white figure backgrounds into the page without altering source images. */
+.research-page .introducing img,
+.research-page .mywork-grid img,
+.research-page .vggface2-grid img {
+    mix-blend-mode: multiply;
+}
+
 .research-section {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2 columns */
